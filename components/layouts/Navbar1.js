@@ -14,7 +14,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-
+import Button from '@material-ui/core/Button';
+import Link from 'next/link'
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -191,6 +192,12 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+            <Link href="/singup">
+          <Button color="inherit" >Signup</Button>
+          </Link>
+          <Link href="/signin">
+          <Button color="inherit" >Signin</Button>
+          </Link>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
